@@ -246,6 +246,7 @@ plot_sq1 <- function(sq_mtx, file_name){
 	heatmap(as.matrix(sq_mtx), Rowv=NA, Colv=NA)
 	dev.off()	
 }
+plot_sq1(square_mel_hp6, 4365000, 4765000, c(4382834, 4386184, 4394037, 4403408, 4415919, 4416144, 4418261, 4425421, 4430165, 4438209, 4442527, 4444843, 4448842, 4454546, 4458615, 4478363, 4661105, 4726345, 4577719, 4701000),"sq_mel_hp6_sciadv.png")
 
 
 plot_sq(square_mel_hp6, 41, 24, "sq_mel_hp6_sciadv.svg")
@@ -253,7 +254,6 @@ plot_sq(square_yak_hp6, 41, 24, "sq_yak_hp6.svg")
 plot_sq(square_pse_hp6, 27, 17, "sq_pse_hp6.svg")
 plot_sq(square_mir_hp6, 27, 17, "sq_mir_hp6.svg")
 
-plot_sq1(square_mel_hp6,"sq_mel_hp6_sciadv.png")
 
 
 #save(list=ls(), file="wrkspce2.rdata")
