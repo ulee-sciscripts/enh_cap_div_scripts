@@ -168,6 +168,19 @@ p <- DimPlot(all_combined.no_ansperm, reduction="umap", pt.size=1e-2)
 p
 dev.off()
 
+						  
+png("sc_liftoff/hp6_umap_spec.png", width=6, height=4*3, pointsize=3, units="in", res=600)
+p1 <- DimPlot(all_combined.no_ansperm_spec[[1]], reduction="umap", shuffle=TRUE)
+# p1 <- p1 & theme(text=element_text(family="Roboto"), legend.position="none")
+p2 <- DimPlot(all_combined.no_ansperm_spec[[2]], reduction="umap", shuffle=TRUE)
+# p2 <- p2 & theme(text=element_text(family="Roboto"), legend.position="none")
+p3 <- DimPlot(all_combined.no_ansperm_spec[[3]], reduction="umap", shuffle=TRUE)
+# p3 <- p3 & theme(text=element_text(family="Roboto"), legend.position="none")
+
+# p <- p & theme(text=element_text(family="Roboto"), legend.position="none")
+p1/p2/p3
+dev.off()
+						  
 DefaultAssay(all_combined.no_ansperm) <- "RNA"
 
 #resplit now that pca and umap have been performed for all species
